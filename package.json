@@ -1,0 +1,26 @@
+{
+  "name": "basic-env-write",
+  "version": "1.0.0",
+  "description": "Simple container that creates an API endpoint that returns the value of an ENV variable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakkaj/basic-env-write.git"
+  },
+  "author": "jakkaj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakkaj/basic-env-write/issues"
+  },
+  "homepage": "https://github.com/jakkaj/basic-env-write#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

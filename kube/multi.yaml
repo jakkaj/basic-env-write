@@ -1,0 +1,53 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: echoer-deployment2
+spec:
+  selector:
+    matchLabels:
+      app: echoer
+      version: v2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: echoer
+        version: v2
+    spec:
+      containers:
+      - name: echoermain
+        image: jakkaj/basic-env-write:1 # Update the version of nginx from 1.7.9 to 1.8
+        ports:
+        - containerPort: 8001
+        env:
+        - name: ECHOENV
+          value: "Hello from version 2"
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: echoer-deployment3
+spec:
+  selector:
+    matchLabels:
+      app: echoer
+      version: v3
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: echoer
+        version: v3
+    spec:
+      containers:
+      - name: echoermain
+        image: jakkaj/basic-env-write:1 # Update the version of nginx from 1.7.9 to 1.8
+        ports:
+        - containerPort: 8001
+        env:
+        - name: ECHOENV
+          value: "Hello from version 3"
+      nodeSelector:
+        beta.kubernetes.io/os: linux
