@@ -1,4 +1,4 @@
-# Basic Environemnt Writer for Kubernetes
+# Basic Environment Writer for Kubernetes
 
 A simple container that will echo the contents of an environment variable. 
 
